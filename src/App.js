@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import TypeTodo from './components/TypeTodo.jsx'
+import TodoList from './components/TodoList.jsx'
+import styled from 'styled-components';
+
+const Style_Container = styled.div`
+  width: 1140px;
+  min-height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Style_Container>
+      <TypeTodo />
+      <TodoList />
+    </Style_Container>
   );
 }
 
